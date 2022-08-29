@@ -1,0 +1,9 @@
+=============
+ダイアグラム
+=============
+
+.. toctree::
+
+   Common
+   BlockDefinitionDiagram
+

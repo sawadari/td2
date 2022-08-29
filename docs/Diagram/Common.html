@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.1. ダイアグラム共通要素 &mdash; sample  ドキュメント</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="2.2. ブロック定義図" href="BlockDefinitionDiagram.html" />
+    <link rel="prev" title="2. ダイアグラム" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> sample
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../About/About.html">1. システムエンジニアリングとSysML</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. ダイアグラム</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. ダイアグラム共通要素</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.1.1. ダイアグラム共通要素の例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.1.2. フレーム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.1.3. コメント</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.1.4. ステレオタイプ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="BlockDefinitionDiagram.html">2.2. ブロック定義図</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sample</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2. </span>ダイアグラム</a> &raquo;</li>
+      <li><span class="section-number">2.1. </span>ダイアグラム共通要素</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Diagram/Common.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">2.1. </span>ダイアグラム共通要素<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク"></a></h1>
+<p>前述のようにSysMLにはいくつかの種類のダイアグラムがあり、ダイアグラムの種類によって記載できるモデル要素の種類が異なる。
+しかし中にはダイアグラムによらず共通して利用できるモデル要素がある。
+本章ではそのようなダイアグラム共通のモデル要素について解説する。</p>
+<section id="id2">
+<h2><span class="section-number">2.1.1. </span>ダイアグラム共通要素の例<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>図2.1は、ダイアグラム共通のモデル要素を含むブロック定義図(図1-4の再掲)である。
+本章ではこの図を題材としてモデル要素の解説を行なう。</p>
+</section>
+<section id="id3">
+<h2><span class="section-number">2.1.2. </span>フレーム<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>ダイアグラムの範囲を示すための矩形をフレームと呼ぶ。</strong></p>
+<ul class="simple">
+<li><p>図2-2のように、フレームの左上の部分にはヘッダと呼ばれる箇所があり、ここにダイアグラムの名称等の情報を記載する。</p></li>
+<li><p>ヘッダには以下のような形式で情報を記載する。</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ダイアグラム種別</span><span class="p">[</span><span class="n">モデル要素種別</span><span class="p">]</span> <span class="n">モデル要素名</span><span class="p">[</span><span class="n">ダイアグラム名</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>ダイアグラム種別には、表2.1に示すような名称または略称を指定できる。</p></li>
+<li><p>ダイアグラム種別はボールド体で表記する。</p></li>
+<li><p>モデル要素種別やモデル要素名は、そのダイアグラムのフレーム全体で表現するモデル要素を特定するために指定する。</p></li>
+</ul>
+<p>例えば図2.2の例では、ダイアグラムが「コピー機」パッケージの構造を表現していることを示している。
+各種ダイアグラムのフレーム全体で記述できるモデル要素の種類の例を表2.2に示す。
+ヘッダの情報のうち、ダイアグラム種別とモデル要素名の指定は必須である。
+モデル要素種別やダイアグラム名は、あいまいさを無くすために必要に応じて指定する。
+1つのモデル要素に対して複数のダイアグラムがある場合、ダイアグラム名を指定することでダイアグラムを一意に特定できるようになる。</p>
+</section>
+<section id="id4">
+<h2><span class="section-number">2.1.3. </span>コメント<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>モデル要素に対して任意の文字列を付加することで、モデルに情報を追加できる</strong></p>
+<ul class="simple">
+<li><p>図2.1では、コピー機制御部がコピーのための各種処理を実行するハードウェアに指示を行なうことを図2.3のように示している。</p></li>
+<li><p>図2.3のようにコメントは、ノートと呼ばれる右上の角の曲がった矩形の中に文字列を記載して表現する。</p></li>
+<li><p>コメントの対象となるモデル要素を示すために、そのモデル要素とノートの間を破線で接続して表現できる。</p></li>
+<li><p>ノートは制約や根拠(Rationale)、問題(Problem) 等を表現するためにも使用される。</p></li>
+<li><p>根拠や問題については第6章「要求図」で後述する。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2><span class="section-number">2.1.4. </span>ステレオタイプ<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>UMLのモデル要素を元に、特定の用途のために拡張して定義できる。</strong></p>
+<ul class="simple">
+<li><p>ステレオタイプを表記するには、図2.4のように要素にステレオタイプ名を表記する方法の他に、ステレオタイプ用のアイコンを定義し、アイコンでステレオタイプを表現する方法がある。</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="2. ダイアグラム" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BlockDefinitionDiagram.html" class="btn btn-neutral float-right" title="2.2. ブロック定義図" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, t_sawada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

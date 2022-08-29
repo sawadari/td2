@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.2. ブロック定義図 &mdash; sample  ドキュメント</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="prev" title="2.1. ダイアグラム共通要素" href="Common.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> sample
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../About/About.html">1. システムエンジニアリングとSysML</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. ダイアグラム</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Common.html">2.1. ダイアグラム共通要素</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. ブロック定義図</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.2.1. ブロック定義図とは</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.2.2. ブロック定義図の例(全体)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.2.3. ブロック</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#association">2.2.4. 関連(Association)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#associationend">2.2.5. 関連端(AssociationEnd)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigability">2.2.6. 誘導可能性(Navigability)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiplicity">2.2.7. 多重度(Multiplicity)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#part-association">2.2.8. パート関連(Part Association)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shared-association">2.2.9. 共有関連(Shared Association)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#association-block">2.2.10. 関連ブロック(Association Block)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compartment">2.2.11. 区画(Compartment)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.2.11.1. プロパティ用区画</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constraints-compartment">2.2.11.2. 制約区画(Constraints Compartment)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#namespace-compartment">2.2.11.3. 名前空間区画(Namespace Compartment)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#structure-compartment">2.2.11.4. 構造区画(Structure Compartment)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operations-compartment">2.2.11.5. 操作区画(Operations Compartment)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#generalization">2.2.12. 汎化(Generalization)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">2.2.13. 値型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sample</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2. </span>ダイアグラム</a> &raquo;</li>
+      <li><span class="section-number">2.2. </span>ブロック定義図</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Diagram/BlockDefinitionDiagram.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">2.2. </span>ブロック定義図<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク"></a></h1>
+<p>他の章で解説する内部ブロック図、パラメトリック図等、いくつかの図を記述する上で、別
+途「型」を定義しておくことが必要である。
+本章では、型を定義するための図であるブロック
+定義図について解説する。</p>
+<section id="id2">
+<h2><span class="section-number">2.2.1. </span>ブロック定義図とは<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>ブロック定義図(Block Definition Diagram) と内部ブロック図(Internal Block Diagram)は構造図として位置づけられ、システムの構造を表現するために利用される。
+構造図を用いて、システムをその構成要素のツリー構造として表現することを始め、構成要素間の種々の関係を表現できる。</p>
+<p>本章で解説するブロック定義図は、特にシステムを構成する要素の型(Type) を定義するために利用される。では、ここで言う「型」とはどのようなものだろうか。
+例として、「田中さんのマイカー」、「佐藤さんのマイカー」といった、いくつかの実在の自動車を考えてみよう。
+そしてこれらの自動車を分類してみて欲しい。
+セダン、ハッチバックといった車体の形状に着目した分類や、FF、FRといった駆動方式に着目した分類等、いくつかの分類方法があることに気付くだろう。
+得られたこれらの分類に対して、各々どのような特性を持っているかを考えてみて欲しい。
+それまで漠然としていた「自動車」に対する捉え方が、徐々に明確なものになってきたのではないだろうか。
+この例では、「田中さんのマイカー」が実際の物理的な物であるのに対して、「セダン」「FF」等は物の特性を表す型とみなすことができる。
+型に着目して物事を掘り下げていくことは、すなわち物事を分析し、明確化することだと言えるだろう。</p>
+<p>このように型に着目しながらシステムやその構成要素を表現する上で、ブロック定義図を活用できる。
+ブロック定義図で利用可能な型にはいくつかの種類があり、後述のブロックや値型等が含まれる。
+ブロック定義図は、言語仕様上UMLのクラス図をベースとしており、クラス図で使える言語要素の多くをブロック定義図でも使うことができる。</p>
+</section>
+<section id="id3">
+<h2><span class="section-number">2.2.2. </span>ブロック定義図の例(全体)<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>ブロック定義図について説明するための題材として、図3.2のようなロケットを考えてみよう。</p>
+<p>図3.4は、より多くの種類のモデル要素を用いて、ロケットの構造の概略を表現したブロック定義図である。
+以降、図3.4のブロック定義図をもとに、各モデル要素について説明していく。</p>
+</section>
+<section id="id4">
+<h2><span class="section-number">2.2.3. </span>ブロック<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>システムやその構成要素を表現するための単位</strong></p>
+<ul class="simple">
+<li><p>ブロックは、システムをその構成要素に分解することや、それら要素を分類することによって得ることができる</p></li>
+<li><p>ブロックを使って、システムを構成単位のツリー構造として表現できる</p></li>
+<li><p>ブロックは型の一種であり、プロパティや操作等、後述するような様々な情報をブロックに付加することで、ブロックをより詳細に表現できる</p></li>
+<li><p>ブロックの表記ではステレオタイプ名≪ block ≫を用いる。ただしブロック定義図の中で≪ block ≫の表記を省略してもデフォルトでブロックと見なされるため、表記を省略しても構わない</p></li>
+</ul>
+<p><strong>例</strong></p>
+<p>図3.4のブロック定義図では、ロケットのようなシステムや、その構成要素であるロケットエンジン等を表す単位を、図3.5のように表現している。</p>
+</section>
+<section id="association">
+<h2><span class="section-number">2.2.4. </span>関連(Association)<a class="headerlink" href="#association" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>関連とは2つのブロックの間で単に関係があることを表現する。</strong></p>
+<p><strong>例</strong></p>
+<p>図3.4のブロック定義図では、推進部と被運搬部の間に、「推進部が被運搬部に推力を加える」関係があることを図3.7のように表現している。
+関連でつながれた一方のブロックが関連名の主語に当たる場合には、黒い三角形で関連の作用する方向を表現できる。
+また、「～を加速する」のように関連につながるブロックの一方が目的語に当たる場合には、より簡単に「加速する」と表記できる。</p>
+<p>図3.7は推進部と被運搬部の意味的な関係を表現したやや抽象的なモデルだが、関連を使ってより物理的な関係を表現できる。
+図3.8は推進部と被運搬部の間の物理的な接続関係を表現したモデルの例である。
+後述のパート関連や共有関連のように特別な意味を持つ関連と異なり、図3.7のようにブロック間の単純な参照関係を表現するための関連を、参照関連(Reference Association) と呼ぶ。</p>
+</section>
+<section id="associationend">
+<h2><span class="section-number">2.2.5. </span>関連端(AssociationEnd)<a class="headerlink" href="#associationend" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>関連端とは関連の表す文脈において、関連につながるブロックが果たす役割を表現する。</strong></p>
+<p><strong>例</strong></p>
+<p>図3.4では、「～に推力を加える」関係において、推進部は「推進元」として働き、被運搬部は「作用先」として働くことを図3.9のように表現している。</p>
+</section>
+<section id="navigability">
+<h2><span class="section-number">2.2.6. </span>誘導可能性(Navigability)<a class="headerlink" href="#navigability" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>誘導可能性とは関連でつながれた一方のブロックから、もう一方のブロックを参照できるかどうかを表す。</strong></p>
+<p><strong>例</strong></p>
+<p>図3.4では、コア機体と固体燃料ブースターの間の関係について、コア機体から固体燃料ブースターを参照するが、逆に固体燃料ブースターからコア機体は参照しないことを図3.10のように表現している。
+図3.10では単方向のみ参照が可能なため、関連の一端に矢印を表記している。
+これに対して双方向とも参照が可能な場合には、図3.7のように矢印を表記しない。</p>
+</section>
+<section id="multiplicity">
+<h2><span class="section-number">2.2.7. </span>多重度(Multiplicity)<a class="headerlink" href="#multiplicity" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>多重度とは関連でつながれた一方のブロックのインスタンス1つに対して、もう一方のブロックのインスタンスがいくつ対応するかを表す。</strong></p>
+<ul class="simple">
+<li><p>多重度の表記で、「0..*」のように文字「*」を使うと上限の指定のないことを意味する。</p></li>
+<li><p>また多重度として文字「*」のみを単独で指定した場合は、「0..*」と同じ意味になる。</p></li>
+<li><p>誘導可能性が単方向のみの関連において、参照される側の多重度を省略すると、デフォルト多重度「1」が適用される</p></li>
+<li><p>後述のパート関連や共有関連では、菱形側のデフォルト多重度は「0..1」</p></li>
+</ul>
+<p><strong>例</strong></p>
+<p>図3.4では、コア機体と固体燃料ブースターの間の関係について、1つのコア機体に対し固体燃料ブースターを最大4基まで装備可能であることを図3.11のように表現している。
+装備可能な下限は0基であり、すなわちブースターを装備しない場合もあることを表している。</p>
+<p>図3.12では、荷載部に対するフェアリングの多重度は示されていない。
+このように誘導可能性が単方向のみの関連において、参照される側の多重度を省略すると、デフォルト多重度「1」が適用される。
+この場合1つの荷載部に対してフェアリングは1つ対応することを意味する。
+なお後述のパート関連や共有関連では、菱形側のデフォルト多重度は「0..1」である。</p>
+</section>
+<section id="part-association">
+<h2><span class="section-number">2.2.8. </span>パート関連(Part Association)<a class="headerlink" href="#part-association" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><strong>全体と部分との関係を表現する関連を表す。</strong></p>
+<p>図3.4では、ロケットと推進部の間の関係について、推進部がロケットの一部であることを図3.13のように表現している。
+パート関連には以下のような制約がある。</p>
+<ul class="simple">
+<li><p>パート関連で表現された「全体-部分」関係において、部分は同時に複数の全体に属することはできない。</p></li>
+<li><p>パート関連における全体が削除されると、部分も同時に削除される。</p></li>
+</ul>
+<p>図3.4では、推進部がコア機体、ロケットエンジン、固体燃料ブースターから構成されていることを図3.14 のように表している。
+このように、ある1つのブロックをパート関連の一端（全体側）とする関係が複数ある場合に、パート関連の一端をまとめて表記できる場合がある。
+このように表記したパート関連を、多分岐パート関連(Multibranch Part Association)と呼ぶ。
+関連の一端をまとめて表記するには、まとめられる側の関連端の情報（関連端名、多重度、誘導可能性等）が一致している必要がある。</p>
+</section>
+<section id="shared-association">
+<h2><span class="section-number">2.2.9. </span>共有関連(Shared Association)<a class="headerlink" href="#shared-association" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>図3.4では、ロケットと被運搬部の間の関係について、被運搬部がロケットの一部であること、ロケットが破棄されても被運搬部は運用が継続されることを、共有関連(Shared Association)を用いて図3.15 のように表現している。
+共有関連は、厳密な意味を定められているわけではなく、モデリングの状況に応じて意味を決めて利用するための関連である。
+「3.4.4 パート関連」と同様、共有関連についても、関連の一端をまとめて表記できる。
+これを多分岐共有関連(Multibranch Shared Association) と呼ぶ。</p>
+</section>
+<section id="association-block">
+<h2><span class="section-number">2.2.10. </span>関連ブロック(Association Block)<a class="headerlink" href="#association-block" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>図3.4では、液体燃料タンクとロケットエンジンの関係について、液体燃料タンクからロケットエンジンに液体燃料が供給される関係があること、燃料供給量のような情報が伴うことを図3.16 のように表現している。
+このように、関連だけでなくブロックの性質を合わせ持つことで、単なる関連よりも多くの特性を表現できるモデル要素を、関連ブロック(Association Block)と呼ぶ。
+関連ブロックは、関連であると同時にブロックでもあるため、後述のようなプロパティや操作等、通常のブロックと同様の要素を保持できる。</p>
+</section>
+<section id="compartment">
+<h2><span class="section-number">2.2.11. </span>区画(Compartment)<a class="headerlink" href="#compartment" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>図3.17では、図3.4の「推進部」ブロックに付随する様々な特性を表現している。
+このように、ブロックの特性を様々な形式で表現する際に、区別して表記するための領域を区画(Compartment)と呼ぶ。
+SysML ではいくつかの標準的な区画を規定している。
+また利用者が区画を定義して利用できる。
+ブロックの矩形に各種区画を表記する順序は任意である。
+区画中に区画名を表記して、種類を明示的に区別しても良い。</p>
+<section id="id5">
+<h3><span class="section-number">2.2.11.1. </span>プロパティ用区画<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク"></a></h3>
+<p>「3.5.1プロパティ」のように、プロパティをブロックの区画中に表記できる。
+表3.3は、プロパティを表現する上で利用できる区画である。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>区画名</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>values</p></td>
+<td><p>値型（「3.7 値型」で後述）を型とするプロパティのための区画</p></td>
+</tr>
+<tr class="row-odd"><td><p>parts</p></td>
+<td><p>パート関連で保有するブロックを型とするプロパティのための区画</p></td>
+</tr>
+<tr class="row-even"><td><p>references</p></td>
+<td><p>参照関連で関係付けられたブロックを型とするプロパティのための区画</p></td>
+</tr>
+<tr class="row-odd"><td><p>properties</p></td>
+<td><p>プロパティ全般を区別なく表記するための区画</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<section id="property">
+<h4><span class="section-number">2.2.11.1.1. </span>プロパティ(Property)<a class="headerlink" href="#property" title="このヘッドラインへのパーマリンク"></a></h4>
+<p>図3.18 では、図3.4 の「ロケットエンジン」ブロックが保持する情報を区画中に表現している。
+このように、ブロックが保持する情報がプロパティ(Property)である。</p>
+<p>プロパティは、ブロックの区画中に以下のような形式で表記できる。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">プロパティ名</span><span class="p">:</span> <span class="n">型</span><span class="p">[</span><span class="n">多重度</span><span class="p">]</span> <span class="o">=</span> <span class="n">デフォルト値</span><span class="p">{</span> <span class="n">プロパティ修飾子</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>上記の形式の中で、プロパティ名以外は省略して表記できる。</p></li>
+<li><p>多重度の表記を省略した場合は、多重度は1と見なされる。</p></li>
+</ul>
+</section>
+<section id="id6">
+<h4><span class="section-number">2.2.11.1.2. </span>利用可能なプロパティ修飾子の例<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>プロパティ修飾子</p></th>
+<th class="head"><p>意味</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>readOnly</p></td>
+<td><p>プロパティは読み取り専用</p></td>
+</tr>
+<tr class="row-odd"><td><p>ordered</p></td>
+<td><p>プロパティは順序付けられている</p></td>
+</tr>
+<tr class="row-even"><td><p>unique</p></td>
+<td><p>プロパティに重複がない</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>記述例</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">補助推進</span><span class="p">:</span> <span class="n">固体燃料ブースター</span><span class="p">[</span><span class="mf">0..4</span><span class="p">]</span>
+<span class="n">推力</span><span class="p">:</span> <span class="n">kN</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">ペイロードID</span> <span class="p">:</span> <span class="n">Integer</span> <span class="p">{</span> <span class="n">unique</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>「3.4.1 関連端」の関連端もプロパティの一種である。
+例えば、図3.9 において、関連端「作用先」はブロック「推進部」が保持するプロパティである。</p>
+</section>
+<section id="distributed-property">
+<h4><span class="section-number">2.2.11.1.3. </span>分布プロパティ(Distributed Property)<a class="headerlink" href="#distributed-property" title="このヘッドラインへのパーマリンク"></a></h4>
+<p>図3.4では、固体燃料ブースターの推力の確率分布が正規分布であることを図3.19のように表現している。
+このように、値の確率分布を指定できるように拡張されたプロパティを、分布プロパティ(Distributed Property)と呼ぶ。
+各種分布プロパティを、表3.2に示す。
+分布プロパティの記述例を以下に示す。</p>
+<p><strong>記述例</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{ mean=2500, standardDeviation=0.8 } 推力: kN
+≪ interval ≫ { min=101.0, max=105.0 } 体積: m^3
+≪ uniform ≫ { min=87, max=92 } 速度: mph
+</pre></div>
+</div>
+<p>記述例のように、分布プロパティの種類がNormal の場合にはパラメータの種類で判別できるが、Interval とUniform はパラメータの種類が同じであるため、ステレオタイプを明示して区別する。</p>
+<blockquote>
+<div></div></blockquote>
+</section>
+</section>
+<section id="constraints-compartment">
+<h3><span class="section-number">2.2.11.2. </span>制約区画(Constraints Compartment)<a class="headerlink" href="#constraints-compartment" title="このヘッドラインへのパーマリンク"></a></h3>
+<p>図3.4では、推進部全体の推力の合計（総推力）が、ロケットエンジンの推力の合計と、固体燃料ブースターの推力の合計の和に等しくなるという制約があることを図3.20 のように表現している。
+このように、モデル要素の間にある制約を表現するための区画が、制約区画(Constraints Compartment) である。
+制約区画に記述する制約は、一般的なテキストベースの書式による制約の記述を波括弧で囲った形式で表現する。
+区画の中に制約を複数記述しても良い。
+図3.20の例では、SysML と同様OMG (Object Management Group) によって仕様が策定されたOCL (Object Constraint Language) を用いて制約を表現している。
+制約を表現する上で、区画に記載せずにノート（「2.3 コメント」参照）を使うこともできる。
+図3.21 は、ノートを使って制約を表現した例である。</p>
+</section>
+<section id="namespace-compartment">
+<h3><span class="section-number">2.2.11.3. </span>名前空間区画(Namespace Compartment)<a class="headerlink" href="#namespace-compartment" title="このヘッドラインへのパーマリンク"></a></h3>
+<p>図3.22 では、「荷載部」ブロックが他のいくつかのブロックの定義を包含していることを、図3.4 とは異なる形式で表現している。
+このように、あるブロックが別のモデル要素の定義を包含しているときに、包含されたモデル要素をグラフィカルに表現するための区画が、名前空間区画(Namespace Compartment)である。
+名前空間区画には、ブロック定義図で利用可能な様々なモデル要素を表記できる。
+名前空間区画を使って、モデル要素の定義の包含関係を表現できるが、これはあくまでモデル要素の定義がどこに属するかの問題であり、ブロック間の「全体-部分関係」等とは異なるので注意されたい。</p>
+</section>
+<section id="structure-compartment">
+<h3><span class="section-number">2.2.11.4. </span>構造区画(Structure Compartment)<a class="headerlink" href="#structure-compartment" title="このヘッドラインへのパーマリンク"></a></h3>
+<p>図3.23 では、「推進部」ブロックがいくつかの要素から構成されていることを、図3.4 とは異なる形式で表現している。
+このように、ブロックを構成する要素を表現するための区画が、構造区画(Structure Compartment)である。
+構造区画では、第4 章で解説する内部ブロック図で利用可能な多くのモデル要素を使うことができる。
+これらのモデル要素の詳細について詳しくは第4 章「内部ブロック図」や第5章「ポートとフロー」を参照されたい。</p>
+</section>
+<section id="operations-compartment">
+<h3><span class="section-number">2.2.11.5. </span>操作区画(Operations Compartment)<a class="headerlink" href="#operations-compartment" title="このヘッドラインへのパーマリンク"></a></h3>
+<p>図3.4 では、ロケットエンジンが「点火する」振る舞いを持つことを、図3.24 のように表現している。
+このように、ブロックの振る舞いを表すモデル要素が、操作である。
+そして操作を表記するためのブロック中の区画が、操作区画(Operations Compartment)である。
+操作区画には以下のような形式で操作を表記できる。</p>
+<section id="id7">
+<h4><span class="section-number">2.2.11.5.1. </span>操作の形式<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">操作名</span><span class="p">(</span> <span class="n">パラメータリスト</span><span class="p">)</span> <span class="p">:</span> <span class="n">返却値型</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>返却値型は省略して表記できる。</p></li>
+<li><p>パラメータリストは、パラメータをカンマ区切りで表記する。</p></li>
+<li><p>パラメータの形式は以下の通りである。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h4><span class="section-number">2.2.11.5.2. </span>パラメータの形式<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">方向パラメータ名</span><span class="p">:</span> <span class="n">型名</span><span class="o">=</span> <span class="n">デフォルト値</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>上記のうちパラメータ名以外は省略して表記できる。</p></li>
+<li><p>方向には、in, out, inout を指定できる。</p></li>
+<li><p>各々、入力パラメータ、出力パラメータ、入出力パラメータを意味する。</p></li>
+</ul>
+<p><strong>記述例</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">点火する</span><span class="p">()</span>
+<span class="n">ブースターを分離する</span><span class="p">(</span><span class="n">bids</span> <span class="p">:</span> <span class="n">ブースターID</span> <span class="n">リスト</span><span class="p">)</span> <span class="p">:</span> <span class="n">結果</span>
+<span class="n">燃料を供給する</span><span class="p">(</span><span class="ow">in</span> <span class="n">tid</span> <span class="p">:</span> <span class="n">タンクID</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="n">amount</span> <span class="p">:</span> <span class="n">tps</span><span class="p">,</span> <span class="n">out</span> <span class="n">prevResult</span> <span class="p">:</span> <span class="n">tps</span><span class="p">)</span> <span class="p">:</span> <span class="n">結果</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="generalization">
+<h2><span class="section-number">2.2.12. </span>汎化(Generalization)<a class="headerlink" href="#generalization" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>図3.4 では、ロケットによって運搬される被運搬部の種類として、荷載部とロケット（この場合第2段ロケット）があることを、図3.25 のように表現している。
+ここで被運搬部は、ロケットによって運搬される部分を抽象的に表した概念である。
+このように、相対的に具象的なブロックと抽象的なブロックとの関係を表現するためのモデル要素が、汎化(Generalization)である。
+具象的なブロックのインスタンスは、そのブロックと汎化関係のあるより抽象的なブロックの特性を受け継ぐ。
+汎化はしばしば物事の体系的な分類のために利用される。
+また図3.25 では、被運搬部が抽象的な概念であり、実体はあくまでロケットや荷載部であることを表現している。
+このように、直接インスタンス（実体）の型になることのないブロックに対し、抽象指定{abstract} を設定する。
+抽象指定されたブロックは、直接インスタンス化されない代わりに、汎化関係のあるより具象的なブロックがインスタンスの型となる。
+抽象指定されたブロックの名称はイタリック体で表記する。</p>
+</section>
+<section id="id9">
+<h2><span class="section-number">2.2.13. </span>値型<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>図3.4 の中では図3.26 のように、ロケットエンジンの推力の値を単位「kN」を表す型で扱っている。
+このように、値の型を定義するためのモデル要素が、値型(Value Type) である。
+値型で型付けられた情報は、参照を介して扱われることはなく、値としてのみ扱われる。
+このため値型は参照関連による参照先となることはない。
+値型を定義する際には、図3.27のようにしばしば単位や量種別を利用する。</p>
+<p>図3.27では、値型kN を単位「キロニュートン」を使って定義している。
+このようにモデル要素「単位」(Unit) を使って、値型の定義で用いる単位を指定できる。</p>
+<p>また図3.27では、単位「キロニュートン」が量種別「力」を使って定義されている。
+このように、単位や値型がどのような種類の量を表すかを定義するためのモデル要素が、量種別(Quantity Kind) である。
+単位や量種別は型ではないため、ブロックのプロパティや操作のパラメータのための型として直接利用できない。
+そのような目的には値型を定義して利用する。
+図3.27の値型の定義では、ステレオタイプ≪ valueType ≫ を修飾するための値を、ステレオタイプ・プロパティ区画(Stereotype Property Compartment) の中に名前と値の組で表
+記している。ここでは名前「unit」とその値「キロニュートン」を指定しているが、値型の定義にはこの他に名前「quantityKind」とその値を指定できる。
+一方、単位の定義では「quantityKind」を指定している。
+これら「unit」や「quantityKind」の指定はいずれもオプションであり、省略できる。
+図3.27 の値型や単位の定義では、要素名のための最上位の区画でステレオタイプ名≪valueType ≫ や≪ unit ≫ の表記を省略しているが、表記しても良い。
+値型は、プロパティや操作を持つこともできる。
+図3.28 は、SysML のモデルライブラリに含まれている、実数(Real) や複素数(Complex)を表す値型の定義である。
+SysML の利用者は、これらの値型を使ってモデリングできる。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Common.html" class="btn btn-neutral float-left" title="2.1. ダイアグラム共通要素" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, t_sawada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

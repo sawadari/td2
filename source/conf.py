@@ -56,7 +56,9 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.todo',
     'sphinx.ext.napoleon',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.githubpages'
 ]
 
 html_theme = 'sphinx_rtd_theme'
